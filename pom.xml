@@ -19,7 +19,7 @@
 
 	<properties>
 		<sonar.host.url>http://3.9.115.17:9000</sonar.host.url>
-		<sonar.host.user>c7aed89e199d5c98601e83ae65b782e662deb39f</sonar.host.user>
+		<sonar.login>c7aed89e199d5c98601e83ae65b782e662deb39f</sonar.login>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -33,6 +33,20 @@
 		</dependency>
 
 	</dependencies>
+	<distributionManagement>
+	    <repository>
+	      <id>nexus</id>
+
+	      <url>http://3.9.115.17:9980/DSKTechnologies/repository/DSKJenkins-Release/</url>
+	      <name>DSKTechnologies-RELEASE repository</name>
+	   
+	    </repository>
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>DSKTechnologies-Snapshot repository </name>
+	      <url>http://3.9.115.17:9980/DSKTechnologies/repository/DSKJenkins-Snapshot/</url>
+	    </snapshotRepository>
+	</distributionManagement>
 
 	<!-- Committing and updating changes through Maven, by using below mvn command. 
 		For Commiting mvn -Dmessage="Updated using maven" scm:checkin For updating 
